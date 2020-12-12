@@ -22,9 +22,9 @@ dependencies {
 [![](https://jitpack.io/v/ir.Apprang/Barnava.svg)](https://jitpack.io/#ir.Apprang/Barnava)
 
 
-add this line to activity. if you want to set transparent, replace color with -1
+add this line to activity. if you want to set transparent, replace color with "-1"
 ``` java
-new Barnava(this).change(R.color.red,R.color.blac); // first parameter: statusbar color - secound parameter navigationbar color
+new Barnava(this).change(R.color.red,R.color.black); // first parameter: statusbar color - secound parameter navigationbar color
 ```
 
 License
