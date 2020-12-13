@@ -27,7 +27,7 @@ public class Barnava {
     }
 
 
-    public void change(int statusBarColor, int navigationBarColor) {
+    public void change(int statusBarColor, int navigationBarColor, boolean light_statusbar) {
 
         // رنگ استاتوس و رنگ نویگیشن بار تعویض میشود
         if (statusBarColor == 0 && navigationBarColor == 0) {
@@ -43,6 +43,8 @@ public class Barnava {
                 window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
                 window.setStatusBarColor(ContextCompat.getColor(activity, statusBarColor));
                 window.setNavigationBarColor(ContextCompat.getColor(activity, navigationBarColor));
+                if (light_statusbar)
+                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
         }
 
@@ -55,6 +57,8 @@ public class Barnava {
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                 window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
                 window.setStatusBarColor(ContextCompat.getColor(activity, statusBarColor));
+                if (light_statusbar)
+                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
 
         }
@@ -69,6 +73,8 @@ public class Barnava {
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                 window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
                 window.setNavigationBarColor(ContextCompat.getColor(activity, navigationBarColor));
+                if (light_statusbar)
+                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
 
         }
@@ -84,6 +90,8 @@ public class Barnava {
                 window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
                 window.setStatusBarColor(Color.TRANSPARENT);
                 window.setNavigationBarColor(Color.TRANSPARENT);
+                if (light_statusbar)
+                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
 
         }
@@ -97,6 +105,8 @@ public class Barnava {
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                 window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
                 window.setStatusBarColor(Color.TRANSPARENT);
+                if (light_statusbar)
+                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
 
         }
@@ -106,6 +116,8 @@ public class Barnava {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 Window window = activity.getWindow();
                 window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+                if (light_statusbar)
+                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
 
         }
@@ -117,6 +129,8 @@ public class Barnava {
                 Window window = activity.getWindow();
                 window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
                 window.setStatusBarColor(ContextCompat.getColor(activity, statusBarColor));
+                if (light_statusbar)
+                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
 
         }

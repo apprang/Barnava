@@ -1,9 +1,8 @@
 package ir.apprang.barnavasample;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import ir.apprang.barnava.Barnava;
 
@@ -16,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         new Barnava(this)
-                .change(0,-1);
+                .change(R.color.yellow, -1, false);
 
     }
 }
