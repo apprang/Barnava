@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         new Barnava(this)
-                .change(R.color.yellow, -1, false);
+                .change(0, R.color.yellow, true);
 
     }
 }
