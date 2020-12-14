@@ -38,6 +38,7 @@ public class Barnava {
         win.setAttributes(winParams);
     }
 
+
     public void change(int statusBarColor, int navigationBarColor, boolean light_statusbar) {
 
 
@@ -130,7 +131,7 @@ public class Barnava {
                 window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                 if (light_statusbar)
-                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
                 else
                     window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
                 window.setStatusBarColor(ContextCompat.getColor(activity, statusBarColor));
@@ -183,9 +184,6 @@ public class Barnava {
                 else
                     window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
                 window.setStatusBarColor(ContextCompat.getColor(activity, statusBarColor));
-                if (light_statusbar) {
-                    window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-                }
             }
 
         }
