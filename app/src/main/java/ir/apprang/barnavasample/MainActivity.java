@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 navigationbar = -1;
                 reset();
+
             }
         });
 
